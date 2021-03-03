@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tbxMessage = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnRecieve = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // tbxMessage
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(223, 230);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(379, 147);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.tbxMessage.Location = new System.Drawing.Point(223, 230);
+            this.tbxMessage.Name = "tbxMessage";
+            this.tbxMessage.Size = new System.Drawing.Size(379, 147);
+            this.tbxMessage.TabIndex = 0;
+            this.tbxMessage.Text = "";
+            this.tbxMessage.TextChanged += new System.EventHandler(this.tbxMessage_TextChanged);
             // 
             // textBox1
             // 
@@ -69,15 +70,25 @@
             this.btnRecieve.UseVisualStyleBackColor = true;
             this.btnRecieve.Click += new System.EventHandler(this.btnRecieve_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(78, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Serverns portnummer";
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRecieve);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.tbxMessage);
             this.Name = "Server";
             this.Text = "UDP Server";
             this.ResumeLayout(false);
@@ -87,10 +98,11 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox tbxMessage;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnRecieve;
+        private System.Windows.Forms.Label label1;
     }
 }
 

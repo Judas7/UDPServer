@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+
 
 namespace UDPServer
 {
@@ -17,11 +20,6 @@ namespace UDPServer
             InitializeComponent();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -29,10 +27,18 @@ namespace UDPServer
 
         private void btnRecieve_Click(object sender, EventArgs e)
         {
-
+            IPEndPoint clientEndPoint = new IPEndPoint(IPAdress.Any, 0);
+            UdpClient client = new UdpClient(12345);
+            byte[] inström = client.Receive(ref clientEndPoint);
+            tbxMessage.Text = Encoding.Unicode.GetString(inström);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxMessage_TextChanged(object sender, EventArgs e)
         {
 
         }
